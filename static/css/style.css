@@ -1,6 +1,7 @@
 html,
 body{
     background-color: #ffffff;
+    color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
 }
@@ -12,7 +13,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-self: center;
     font-size: 3vh;
+    height: 7vh;
+    width: 120vh;
     /*Border*/
     border-top-style: solid;
     border-bottom-style: solid;
@@ -26,4 +30,44 @@ header{
 a{
     color: #000000 ;
     text-decoration: none;
+}
+
+main{
+    display: flex;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    color: rgb(0, 0, 0);
+    background-color: #e3242b;
+    border-color: #b90e0a;
 }

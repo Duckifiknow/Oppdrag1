@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    <header>
-        <p>test</p>
 
-    </header>
 
     {% extends "base.html" %}
 
@@ -20,9 +17,15 @@
 
     <main>
         {% block content %}
+        <div class="intro">
+            <h1>Velkommen {{navn}}</h1>
+            <a href="registrering">Registrering</a>
+        </div>
 
-        <h1>dsgjgeoi</h1>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <h2>Produkter</h2>
+        <img src="{{ url_for('static', filename='images/images.jpg') }}" alt="">
+
+        <p>Kommentar: {{ kommentar }}</p>
 
         {% endblock %}
     </main>

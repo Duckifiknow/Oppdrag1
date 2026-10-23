@@ -7,9 +7,24 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-# @app.route("base")
-# def base():
-#     return render_template("base.html")
+@app.route("/registrering", methods=["GET", "POST"])
+def registrering():
+
+    if request.method == "POST":
+        navn = request.form["navn"]
+        epost = request.form["epost"]
+        alder = request.form["alder"]
+        kommentar = request.form["kommentar"]
+
+        return render_template(
+            "index.html",
+            navn=navn,
+            epost=epost,
+            alder=alder,
+            kommentar=kommentar
+        )
+
+    return render_template("registrering.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
